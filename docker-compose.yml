@@ -1,19 +1,19 @@
 services:
-  app:
-    build:
-      dockerfile: dockerfile
-      context: .
-    ports:
-      - 8000:8000
-    volumes:
-     - ./blog:/blog
-    environment:
-      DB_CONNECTION: mariadb
-      DB_HOST: db
-      DB_PORT: 3306
-      DB_user: root 
-      DB_PASSWORD: example
-      DB_DATABASE: app
+  # app:
+  #   build:
+  #     dockerfile: dockerfile
+  #     context: .
+  #   ports:
+  #     - 8000:8000
+  #   volumes:
+  #    - ./blog:/blog
+  #   environment:
+  #     DB_CONNECTION: mariadb
+  #     DB_HOST: db
+  #     DB_PORT: 3306
+  #     DB_user: root 
+  #     DB_PASSWORD: example
+  #     DB_DATABASE: app
   
   db:
     image: mariadb
@@ -26,10 +26,10 @@ services:
     ports:
       - 33061:3306
 
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
+  # adminer:
+  #   image: adminer
+  #   restart: always
+  #   ports:
+  #     - 8080:8080
 volumes:
   kta25dbdata:
